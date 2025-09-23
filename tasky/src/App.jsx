@@ -6,20 +6,23 @@ function App() {
 
   const [ taskState, setTaskState ] = useState({
     tasks: [
-      { title: "Dishes", description: "Empty dishwasher", deadline: "Today" },
-      { title: "Laundry", description: "Fold clothes and put away", deadline: "Tomorrow"},
-      { title: "Tidy up", deadline: "Today" }
+      {  title: "Dishes", description: "Empty dishwasher", deadline: "Today" },
+      {  title: "Laundry", description: "Fold clothes and put away", deadline: "Tomorrow"},
+      {  title: "Tidy up", deadline: "Today" }
     ]
   });
 
   return (
     <div className="container">
       <h1>Tasky</h1>
-      <Task
-        title={taskState.title}
-        description={taskState.description}
-        deadline={taskState.deadline}
+      {taskState.tasks.map((task) => (
+        <Task
+        title={task.title}
+        description={task.description}
+        deadline={task.deadline}
         />
+      ))}
+      
       </div>
   );
 }
