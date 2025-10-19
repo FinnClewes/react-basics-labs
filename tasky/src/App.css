@@ -104,3 +104,25 @@ form {
   width: 50%;
   margin: auto;
 }
+select {
+  text-align: left;
+  width: 100%;
+  margin: auto;
+  height: 3em;
+}
+
+.card.High {
+  background-color: #ff4d4d;
+}
+.card.Medium {
+  background-color: #ffcc00;
+}
+
+.card.Low {
+  background-color: #45a049;
+}
+
+.card.done {
+  background-color: lightgrey;
+  opacity: 0.7;
+}
